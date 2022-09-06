@@ -11,9 +11,15 @@ function getRandom(min, max) {
 
 function getRandomNumbers() {
     const numbers = [];
+    let random;
 
     for(let i = 0; i < 6; i++) {
-        const random = getRandom(1, 49);
+        random = getRandom(1, 49);
+
+        while(numbers.includes(random)) {
+            random = getRandom(1, 49);
+            console.log(`Powtórzyła się liczba ${random}`);
+        }
 
         numbers.push(random);
     }
