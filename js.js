@@ -20,3 +20,7 @@ function getRandomNumbers() {
 
     return numbers;
 }
+
+const numbers = getRandomNumbers();
+
+console.log(`Wylosowane liczby to: ${numbers.join(", ")}`);
